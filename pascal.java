@@ -1,24 +1,24 @@
 package dsa;
-
+import java.util.Scanner;
 public class pascal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n=4;
-		int sp=n;
-		int num=1;
+		System.out.println("Enter the number of lines");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
 		for(int i=0;i<n;i++) {
-			for(int s=1;s<=sp;s++) {
+			for(int j=1;j<n-i;j++) {
 				System.out.print(" ");
 			}
-			num=1;
-			for(int j=0;j<=i;j++) {
+			int num=1;
+			for(int k=0;k<=i;k++) {
 				System.out.print(num+" ");
-				num=num*(i-j)/(j+1);
+				num=num*(i-k)/(k+1);
 			}
-			sp--;
 			System.out.println();
 		}
-	}
+		sc.close();
+		}
 
 }
